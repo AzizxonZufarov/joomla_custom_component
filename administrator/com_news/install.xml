@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.1" type="component" method="upgrade">
+    <name>COM_NEWS</name>
+    <creationDate>October 2023</creationDate>
+    <author>Azizxon</author>
+    <authorEmail>admin@mail.ru</authorEmail>
+    <authorUrl>http://news.com</authorUrl>
+    <license>License Info</license>
+    <version>1.0.1</version>
+    <description>COM_NEWS_DESCRIPTION</description>
+    <files folder="site">
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <filename>news.php</filename>
+        <filename>controller.php</filename>
+    </files>
+    <languages folder="site/language">
+        <language tag="ru-RU">ru-RU/ru-RU.com_news.ini</language>
+    </languages>
+    <install>
+        <sql>
+            <file driver='mysql' charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver='mysql' charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <administration>
+        <menu link="index.php?option=com_news">COM_NEWS</menu>
+        <files folder="admin">
+            <folder>views</folder>
+            <folder>models</folder>
+            <folder>controllers</folder>
+            <folder>language</folder>
+            <folder>tables</folder>
+            <folder>sql</folder>
+            <filename>news.php</filename>
+            <filename>controller.php</filename>
+        </files>
+        <languages folder="admin/language">
+            <language tag="ru-RU">ru-RU/ru-RU.com_news.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.com_news.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
